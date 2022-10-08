@@ -1,13 +1,13 @@
 name: analytics
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
+  js: ^0.6.4
   flutter:
     sdk: flutter
 

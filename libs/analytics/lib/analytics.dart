@@ -1,5 +1,7 @@
 library analytics;
 
+export './web.dart';
+
 /// A Calculator.
 class Calculator {
   /// Returns [value] plus 1.
