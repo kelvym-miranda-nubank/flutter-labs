@@ -24,6 +24,8 @@ This repo contains my current codebase and experiments using flutter
 - `./libs`: Everything under this folder is an adapter to a package
   - `router`: Is the package that abstracts [go_router](https://pub.dev/packages/go_router)
   - `̶s̶h̶e̶l̶l̶`̶:̶ I̶s̶ t̶h̶e̶ p̶a̶c̶k̶a̶g̶e̶ t̶h̶a̶t̶ a̶b̶s̶t̶r̶a̶c̶t̶s̶ t̶h̶e̶ i̶n̶i̶t̶i̶a̶l̶ s̶e̶t̶u̶p̶ o̶f̶ a̶n̶ a̶p̶p̶
-- `./apps`: Is the folder that keeps all Apps that we have
+- `./products`: Is the folder that keeps all Products that we have
   - `starter_app`: Just a demo flutter app
   - `̶c̶a̶l̶c̶u̶l̶a̶t̶o̶r̶`̶:̶ ?̶?̶?̶
+- `./shells`: It's the entrypoint of the deployment of the main app of this project
+  - ...
