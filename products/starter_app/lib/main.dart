@@ -4,6 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
+// TODO: Replace this with a "Common Page Wrapper Shell"
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -102,6 +103,10 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            // ElevatedButton(
+            //   onPressed: () => print("Go to another page"),
+            //   child: const Text('Go back to home page'),
+            // ),
           ],
         ),
       ),

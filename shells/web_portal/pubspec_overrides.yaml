@@ -1,4 +1,6 @@
-# melos_managed_dependency_overrides: router
+# melos_managed_dependency_overrides: router,starter_app
 dependency_overrides:
   router:
     path: ../../libs/router
+  starter_app:
+    path: ../../products/starter_app
