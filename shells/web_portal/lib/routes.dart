@@ -4,7 +4,7 @@ import 'package:web_portal/screens/demo_screens.dart';
 import 'package:router/router.dart';
 
 // TODO: Fix this, convert to a better way
-var routes = <GoRoute>[
+var _routes = <GoRoute>[
   GoRoute(
     path: '/',
     builder: (BuildContext context, GoRouterState state) => const Page1Screen(),
@@ -23,3 +23,7 @@ var routes = <GoRoute>[
     ],
   ),
 ];
+
+final GoRouter routesDefinition = GoRouter(
+  routes: _routes,
+);
