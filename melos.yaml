@@ -3,7 +3,8 @@ repository: https://github.com/devsoutinho/flutter-labs
 
 # Where are the packages being required in this project?
 packages:
-  - packages/**
+  - apps/**
+  - libs/**
 
 # ???
 command:

@@ -18,3 +18,8 @@
 ---
 
 This repo contains my current codebase and experiments using flutter
+
+## How everything is structured
+
+- `./libs`: Everything under this folder is an adapter to a package
+- `./packages`: ???
