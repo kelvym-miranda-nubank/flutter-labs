@@ -1,0 +1,27 @@
+name: CD - Flutter Web
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+  VERCEL_ORG_ID: "team_QMvhZEGiqmvs1uqklBVkrs9k"
+  VERCEL_PROJECT_ID: "prj_EqTt6Jk0bfpsYS9Qmsn1MXdpSOFo"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    - uses: actions/setup-node@v2
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '3.3.4'
+    - run: |
+        melos bootstrap
+        melos build_shell_webportal
+        melos deploy_web_prod

@@ -17,3 +17,6 @@ scripts:
   hello: echo 'Hello World'
   analyze:
     exec: dart analyze .
+  build_shell_webportal: "cd ./shells/web_portal && flutter build web --web-renderer html"
+  deploy_web: "cd ./shells/web_portal && npx vercel ./build/web --confirm --token=$VERCEL_TOKEN"
+  deploy_web_prod: "cd ./shells/web_portal && npx vercel ./build/web --confirm --token=$VERCEL_TOKEN --prod"
