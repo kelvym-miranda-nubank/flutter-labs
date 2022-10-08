@@ -20,3 +20,4 @@ scripts:
   build_shell_webportal: "cd ./shells/web_portal && flutter build web --web-renderer html"
   deploy_web: "cd ./shells/web_portal && npx vercel ./build/web --confirm --token=$VERCEL_TOKEN"
   deploy_web_prod: "cd ./shells/web_portal && npx vercel ./build/web --confirm --token=$VERCEL_TOKEN --prod"
+  preview_web: "cd ./scripts && node ./pullRequestPreview.js --experimental-fetch"

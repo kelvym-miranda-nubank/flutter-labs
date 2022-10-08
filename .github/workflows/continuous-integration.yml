@@ -1,17 +1,18 @@
-name: CD - Flutter Web
+name: CI - Web
 
 on:
-  push:
-    branches: [ main ]
+  pull_request:
+    types: [opened, synchronize]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
 
 jobs:
-  build:
+  deploy_preview:
     runs-on: ubuntu-latest
     steps:
     ## [Common_CI_Steps]
@@ -30,4 +31,4 @@ jobs:
     - run: |
         melos bootstrap
         melos build_shell_webportal
-        melos deploy_web_prod
+        melos preview_web
