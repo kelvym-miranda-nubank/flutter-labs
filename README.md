@@ -6,8 +6,11 @@
 </p>
 
 <p align="center">
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/licence-MIT-blue.svg" alt="License MIT" />
+  </a>
   <a href="https://github.com/invertase/melos">
-    <img src="https://img.shields.io/badge/maintained%20with-melos-f700ff.svg?style=flat-square" alt="Maintained with Melos" />
+    <img src="https://img.shields.io/badge/maintained%20with-melos-f700ff.svg" alt="Maintained with Melos" />
   </a>
 </p>
 
