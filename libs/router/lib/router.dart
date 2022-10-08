@@ -1,6 +1,7 @@
 library router;
 
 export 'package:go_router/go_router.dart';
+export 'package:url_strategy/url_strategy.dart';
 
 /// A Calculator.
 class Calculator {
