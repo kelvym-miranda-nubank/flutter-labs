@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/devsoutinho">
-    <img width="250px" src="https://github.com/devsoutinho.png" alt="Flutter + Firebase logo"><br/>
+    <img width="150px" src="https://github.com/devsoutinho.png" alt="Flutter + Firebase logo"><br/>
   </a>
   <h1 align="center">DevSoutinho/FlutterLabs</h1>
 </p>
