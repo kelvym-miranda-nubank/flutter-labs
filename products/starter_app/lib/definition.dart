@@ -1,10 +1,10 @@
-import 'package:starter_app/main.dart';
+import 'package:starter_app/screens/home_screen.dart';
 
 const name = "starter_app";
 
-const definition = {
+var definition = {
   "/": {
-    "screen": MyHomePage(title: "Sample title"),
-    "route": "/",
+    "screen": const MyHomePage(),
+    "route": MyHomePage.routeName,
   }
 };

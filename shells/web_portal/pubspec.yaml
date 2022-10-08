@@ -33,6 +33,7 @@ dependencies:
     sdk: flutter
   ## Libs
   router: 0.0.1
+  armor: 0.0.1
   ## =======
   ## Products
   starter_app: 0.0.1
