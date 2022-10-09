@@ -76,12 +76,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: context.responsive.value({
+                Breakpoints.xs: Theme.of(context).textTheme.headline4,
+                Breakpoints.sm: Theme.of(context).textTheme.headline3,
+                Breakpoints.md: Theme.of(context).textTheme.headline2,
+                Breakpoints.lg: Theme.of(context).textTheme.headline1,
+              }),
             ),
-            // ElevatedButton(
-            //   onPressed: () => print("Go to another page"),
-            //   child: const Text('Go back to home page'),
-            // ),
           ],
         ),
       ),

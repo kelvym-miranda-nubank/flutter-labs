@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "Shell - Web Portal",
+            "program": "lib/main.dart",
+            "cwd": "shells/web_portal",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
