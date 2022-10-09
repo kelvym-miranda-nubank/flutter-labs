@@ -2,10 +2,10 @@ import 'package:design_system/design_system.dart';
 import 'package:router/router.dart';
 import 'package:flutter/material.dart' hide Text;
 
-class HomeScreen extends StatelessWidget {
+class OptionsScreen extends StatelessWidget {
   static String routeName = "";
 
-  const HomeScreen({super.key});
+  const OptionsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Netflix project!',
+              'Options of the project!',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -24,16 +24,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () => context.go('/'),
+              onPressed: () => context.go('/netflix_clone'),
               child: const Text(
-                'Go the home of the website',
-                selectableText: false,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => context.go('/netflix_clone/options'),
-              child: const Text(
-                'Go the OPTIONS of the NETFLIX project',
+                'Go the home of THIS app',
                 selectableText: false,
               ),
             ),

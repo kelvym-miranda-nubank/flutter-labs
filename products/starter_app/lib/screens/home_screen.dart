@@ -1,9 +1,10 @@
 import 'package:analytics/analytics.dart';
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart' hide Text;
+import 'package:router/router.dart';
 
 class MyHomePage extends StatefulWidget {
-  static String routeName = "/";
+  static String routeName = "";
 
   const MyHomePage({super.key});
 
@@ -82,6 +83,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 Breakpoints.md: Theme.of(context).textTheme.headline2,
                 Breakpoints.lg: Theme.of(context).textTheme.headline1,
               }),
+            ),
+            ElevatedButton(
+              onPressed: () => context.go('/'),
+              child: const Text(
+                'Go the home of the app',
+                selectableText: false,
+              ),
             ),
           ],
         ),

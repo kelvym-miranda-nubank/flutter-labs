@@ -19,12 +19,12 @@ class Page1Screen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(
-                onPressed: () => context.go('/page2'),
-                child: const Text('Go to page 2'),
+                onPressed: () => context.go('/starter_app'),
+                child: const Text('Go to Flutter starter_app'),
               ),
               ElevatedButton(
-                onPressed: () => context.go('/starter_app'),
-                child: const Text('Go to starter_app'),
+                onPressed: () => context.go('/netflix_clone'),
+                child: const Text('Go to Netflix Clone'),
               ),
             ],
           ),

@@ -1,29 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:starter_app/definition.dart' as product_starter_app;
-import 'package:web_portal/screens/demo_screens.dart';
 import 'package:router/router.dart';
+import 'package:web_portal/screens/demo_screens.dart';
+// [Modules]
+import 'package:starter_app/definition.dart' as product_starter_app;
+import 'package:netflix_clone/definition.dart' as product_netflix_clone;
+// ======================
 
-// TODO: Fix this, convert to a better way
-var _routes = <GoRoute>[
-  GoRoute(
-    path: '/',
-    builder: (BuildContext context, GoRouterState state) => const Page1Screen(),
-    routes: <GoRoute>[
-      GoRoute(
-        path: 'page2',
-        builder: (BuildContext context, GoRouterState state) =>
-            const Page2Screen(),
-      ),
-      // Defining the routes of a product
-      GoRoute(
-        path: 'starter_app',
-        builder: (BuildContext context, GoRouterState state) =>
-            product_starter_app.definition["/"]!["screen"] as Widget,
-      )
-    ],
-  ),
-];
-
-final GoRouter routesDefinition = GoRouter(
-  routes: _routes,
-);
+final routesDefinition = RootRouterDefinition(home: const Page1Screen())
+    .registerModuleDefinition(product_starter_app.definition)
+    .registerModuleDefinition(product_netflix_clone.definition)
+    .definition;

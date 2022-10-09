@@ -27,9 +27,11 @@ This repo contains my current codebase and experiments using flutter
 - `./libs`: Everything under this folder is an adapter to a package
   - `router`: Is the package that abstracts [go_router](https://pub.dev/packages/go_router)
   - `analytics`: Is a package that abstracts google analytics
+  - `design-system`: Abstraction for visual stuff
   - `armor`: Is a package that abstracts the **wrapper that every product must have**
 - `./products`: Is the folder that keeps all Products that we have
   - `starter_app`: Just a demo flutter app
+  - `netflix_clone`: A more complex web application built with flutter
 - `./shells`: It's the entrypoint of the deployment of the main app of this project
   - `web_portal`: Actually the only one working is the web_portal
 
@@ -37,13 +39,14 @@ This repo contains my current codebase and experiments using flutter
 - [X] Monorepo with melos
 - [X] ... TDB
 - [X] Lint changes
-- [ ] Create extension method for responsive attached to context
+- [x] Create extension method for responsive attached to context
   - Reference: https://gist.github.com/yiss/585b368b4cc26f1d6748b9cbb4e4515f
-- [ ] Implement a Larger Interface (Whatsapp);
+- [X] Implement a better routing solution 
+  - Create a definition json or something like this
+- [ ] Implement a Larger Interface (Whatsapp/Netflix);
   - Without using stuff from Design System
   - Learn more with work reference
-- [ ] Implement a better routing solution 
-  - Create a definition json or something like this
+- [ ] Understand melos deplopyment features and how to use it bookworm like
 
 ## Support scripts
 
