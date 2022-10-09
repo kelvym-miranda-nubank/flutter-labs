@@ -1,7 +1,5 @@
 library analytics;
 
-export './web.dart';
-
-// import 'package:flutter/foundation.dart' show kIsWeb;
-// https://gpalma.pt/blog/conditional-importing/
-// https://medium.com/flutter-community/conditional-imports-across-flutter-and-web-4b88885a886e
+export './platforms/stub.dart' // Stub implementation
+    if (dart.library.io) './platforms/common.dart' // dart:io implementation
+    if (dart.library.html) './platforms/web.dart'; // dart:html implementation

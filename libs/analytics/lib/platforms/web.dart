@@ -1,6 +1,20 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
 import 'dart:html';
-import 'package:js/js_util.dart';
+import 'dart:js_util';
+import '../abstract.dart';
+
+class AnalyticsImplementation extends Analytics {
+  @override
+  void send() {
+    window.console.log("I'm on the web!!!");
+    window.gtag(
+      data: 'Send data!',
+      hitType: 'Event',
+      eventCategory: 'Category',
+      eventAction: 'Action',
+      eventLabel: "Label",
+    );
+  }
+}
 
 extension WindowExt on Window {
   void gtag({
@@ -23,15 +37,4 @@ extension WindowExt on Window {
       nonInteractive,
     ]);
   }
-}
-
-void send() {
-  window.console.log('Sending data to window.dataLayer!');
-  window.gtag(
-    data: 'Send data!',
-    hitType: 'Event',
-    eventCategory: 'Category',
-    eventAction: 'Action',
-    eventLabel: "Label",
-  );
 }
