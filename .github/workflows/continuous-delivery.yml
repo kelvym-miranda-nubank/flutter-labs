@@ -11,23 +11,12 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
-  build:
+  deploy_web:
     runs-on: ubuntu-latest
     steps:
-    ## [Common_CI_Steps]
-    - uses: actions/checkout@v2
-      with:
-        submodules: recursive
-    - uses: actions/setup-node@v2
-      with:
-        node-version: 18
-    - uses: subosito/flutter-action@v2
-      with:
-        flutter-version: '3.3.4'
-        channel: 'stable' # or: 'beta', 'dev' or 'master'
-    ## ======
-    - run: dart pub global activate melos
-    - run: |
+    - uses: devsoutinho/flutter-composite-action@v4.0.1
+    - name: Build & Deploy
+      run: |
         melos bootstrap
         melos build_shell_webportal
         melos deploy_web_prod
