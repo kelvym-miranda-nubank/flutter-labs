@@ -37,6 +37,8 @@ This repo contains my current codebase and experiments using flutter
 - [X] Monorepo with melos
 - [X] ... TDB
 - [X] Lint changes
+- [ ] Create extension method for responsive attached to context
+  - Reference: https://gist.github.com/yiss/585b368b4cc26f1d6748b9cbb4e4515f
 - [ ] Implement a Larger Interface (Whatsapp);
   - Without using stuff from Design System
   - Learn more with work reference
