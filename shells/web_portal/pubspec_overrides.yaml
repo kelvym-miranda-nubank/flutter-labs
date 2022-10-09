@@ -1,9 +1,11 @@
-# melos_managed_dependency_overrides: router,starter_app,armor,analytics
+# melos_managed_dependency_overrides: router,starter_app,armor,analytics,design_system
 dependency_overrides:
   analytics:
     path: ../../libs/analytics
   armor:
     path: ../../libs/armor
+  design_system:
+    path: ../../libs/design_system
   router:
     path: ../../libs/router
   starter_app:

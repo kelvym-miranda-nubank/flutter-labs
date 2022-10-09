@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/libs/analytics/melos_analytics.iml" filepath="$PROJECT_DIR$/libs/analytics/melos_analytics.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/armor/melos_armor.iml" filepath="$PROJECT_DIR$/libs/armor/melos_armor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/design_system/melos_design_system.iml" filepath="$PROJECT_DIR$/libs/design_system/melos_design_system.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/router/melos_router.iml" filepath="$PROJECT_DIR$/libs/router/melos_router.iml" />
       <module fileurl="file://$PROJECT_DIR$/products/starter_app/melos_starter_app.iml" filepath="$PROJECT_DIR$/products/starter_app/melos_starter_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/shells/web_portal/melos_web_portal.iml" filepath="$PROJECT_DIR$/shells/web_portal/melos_web_portal.iml" />

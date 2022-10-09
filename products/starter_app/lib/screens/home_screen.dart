@@ -1,5 +1,6 @@
 import 'package:analytics/analytics.dart';
-import 'package:flutter/material.dart';
+import 'package:design_system/design_system.dart';
+import 'package:flutter/material.dart' hide Text;
 
 class MyHomePage extends StatefulWidget {
   static String routeName = "/";
@@ -71,6 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text(
               'You have pushed the button this many times:',
+              selectableText: true,
             ),
             Text(
               '$_counter',
