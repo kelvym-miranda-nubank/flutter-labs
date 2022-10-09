@@ -44,3 +44,7 @@ This repo contains my current codebase and experiments using flutter
   - Learn more with work reference
 - [ ] Implement a better routing solution 
   - Create a definition json or something like this
+
+## Support scripts
+
+- `melos create_product <name>`: Creates a new product

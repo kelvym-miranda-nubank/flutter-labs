@@ -1,4 +1,4 @@
-name: starter_app
+name: netflix_clone
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -38,7 +38,6 @@ dependencies:
   design_system: 0.0.1
   analytics: 0.0.1
   # ========================
-  
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
