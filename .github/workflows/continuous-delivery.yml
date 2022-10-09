@@ -11,7 +11,26 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: devsoutinho/flutter-composite-action@v4.0.1
+    - name: Build & Deploy
+      run: |
+          melos bootstrap
+          melos test
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: devsoutinho/flutter-composite-action@v4.0.1
+    - name: Build & Deploy
+      run: |
+          melos bootstrap
+          melos lint
   deploy_web:
+    needs: 
+      - test
+      - lint
     runs-on: ubuntu-latest
     steps:
     - uses: devsoutinho/flutter-composite-action@v4.0.1
