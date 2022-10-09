@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             const Text(
               'Netflix project!',
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.grey,
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
               ),
