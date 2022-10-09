@@ -32,3 +32,13 @@ This repo contains my current codebase and experiments using flutter
   - `starter_app`: Just a demo flutter app
 - `./shells`: It's the entrypoint of the deployment of the main app of this project
   - `web_portal`: Actually the only one working is the web_portal
+
+## Next Steps
+- [X] Monorepo with melos
+- [X] ... TDB
+- [X] Lint changes
+- [ ] Implement a Larger Interface (Whatsapp);
+  - Without using stuff from Design System
+  - Learn more with work reference
+- [ ] Implement a better routing solution 
+  - Create a definition json or something like this
