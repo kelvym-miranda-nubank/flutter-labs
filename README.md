@@ -26,7 +26,9 @@ This repo contains my current codebase and experiments using flutter
 
 - `./libs`: Everything under this folder is an adapter to a package
   - `router`: Is the package that abstracts [go_router](https://pub.dev/packages/go_router)
+  - `analytics`: Is a package that abstracts google analytics
+  - `armor`: Is a package that abstracts the **wrapper that every product must have**
 - `./products`: Is the folder that keeps all Products that we have
   - `starter_app`: Just a demo flutter app
 - `./shells`: It's the entrypoint of the deployment of the main app of this project
-  - ...
+  - `web_portal`: Actually the only one working is the web_portal
