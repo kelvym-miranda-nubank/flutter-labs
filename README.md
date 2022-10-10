@@ -51,3 +51,7 @@ This repo contains my current codebase and experiments using flutter
 ## Support scripts
 
 - `melos create_product <name>`: Creates a new product
+
+## References
+- [Netflix UI](https://www.youtube.com/watch?v=rJKN_880b-M)
+- [RealWorld](https://github.com/gothinkster/realworld)
