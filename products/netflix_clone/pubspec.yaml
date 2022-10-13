@@ -47,7 +47,7 @@ dependencies:
     git:
       url: git@github.com:devsoutinho/flutter-labs.git
       path: libs/design_system
-      ref: design_system-v0.0.2
+      ref: design_system-v0.0.3
   analytics: 0.0.2
   # ========================
 
