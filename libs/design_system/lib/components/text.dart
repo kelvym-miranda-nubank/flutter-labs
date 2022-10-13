@@ -15,6 +15,9 @@ class Text extends f.StatelessWidget {
 
   @override
   f.Widget build(f.BuildContext context) {
+    // ignore: avoid_print
+    print("Oi eu sou um textinho, vamos textar!");
+
     if (kIsWeb && selectableText == null) {
       return f.SelectableText(
         data,
