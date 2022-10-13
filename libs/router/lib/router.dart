@@ -21,7 +21,6 @@ class _RouterRoute {
 class _ModuleDefinition {
   final String name;
   final Map<String, dynamic> routesMap;
-  final _routes = <_RouterRoute>[];
 
   _ModuleDefinition({
     required this.name,
@@ -39,8 +38,6 @@ class _ModuleDefinition {
   _RouterRoute _toRouterRoute(MapEntry<String, dynamic> entry) {
     var path = entry.value["path"];
     var screen = entry.value["component"];
-    var routes = entry.value["routes"];
-    print(routes);
 
     var routePath = "/$name$path";
 

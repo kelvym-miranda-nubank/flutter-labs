@@ -32,7 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   ## Libs
-  router: 0.0.2
+  router: 0.1.0
   armor: 0.0.2
   ## =======
   ## Products
