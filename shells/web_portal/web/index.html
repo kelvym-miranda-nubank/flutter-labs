@@ -54,6 +54,8 @@
 
 <body>
   <script>
+    <!-- TODO: Forcing HTML render in shell -->
+    window.flutterWebRenderer = "html";
     window.addEventListener('load', function (ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
