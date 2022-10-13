@@ -35,7 +35,7 @@ dependencies:
   ## Libs
   armor: 0.0.2
   router: 0.1.0
-  design_system: 0.0.2
+  design_system: 0.0.3
   analytics: 0.0.2
   # ========================
   
