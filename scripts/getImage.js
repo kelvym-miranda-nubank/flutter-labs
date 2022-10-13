@@ -11,4 +11,4 @@ execSync(`mkdir ./assets/images || echo "Already exists"`);
 
 execSync(`wget -O ./assets/images/${size}.jpg ${URL}`)
 
-execSync(`rsync -abviuzP assets/* shells/web_portal/assets`);
+execSync(`rsync -abviuzP --remove-source-files assets/* shells/web_portal/assets`);

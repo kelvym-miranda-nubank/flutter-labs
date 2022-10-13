@@ -28,4 +28,4 @@ doc/api/
 coverage_report
 .lsp
 .clj-kondo/.cache
-./assets
+./assets/
