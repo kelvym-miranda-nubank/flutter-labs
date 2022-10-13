@@ -34,6 +34,8 @@ scripts:
     select-package:
       flutter: true
       dir-exists: test
+  genimage:
+    run: "node ./scripts/getImage.js"
   create_product:
     description: Allow you to create a new product
     run: "cd products && flutter create"

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class DSApp extends StatelessWidget {
   final Widget? home;
+  final ThemeData? theme;
 
   const DSApp({
     super.key,
     this.home,
+    this.theme,
   });
 
   static final ThemeData _defaultTheme = ThemeData(
@@ -16,7 +18,7 @@ class DSApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Product - starter_app',
-      theme: _defaultTheme,
+      theme: theme ?? _defaultTheme,
       home: home,
     );
   }

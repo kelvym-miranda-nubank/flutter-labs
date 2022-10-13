@@ -31,8 +31,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # Common Libraries
-  ## Libs
+  # Project Libraries
+  flutter_bloc: ^8.1.1
+  # ========================
+  # Company Common Libraries
   armor: 0.0.1
   router: 0.0.1
   design_system: 0.0.1

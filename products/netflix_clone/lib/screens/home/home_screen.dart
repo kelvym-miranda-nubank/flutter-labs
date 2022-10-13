@@ -1,5 +1,5 @@
 import 'package:design_system/design_system.dart';
-import 'package:router/router.dart';
+import 'package:netflix_clone/patterns/patterns.dart';
 import 'package:flutter/material.dart' hide Text;
 
 class HomeScreen extends StatelessWidget {
@@ -11,34 +11,41 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Netflix project!',
-              style: TextStyle(
-                color: Colors.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-              ),
+      appBar: PreferredSize(
+        preferredSize: Size(context.responsive.screenWidth.value, 50.0),
+        child: CustomAppBar(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.grey[850],
+        child: const Icon(Icons.cast),
+        // ignore: avoid_print
+        onPressed: () => print("Cast to your TV!"),
+      ),
+      body: const _ScreenBody(),
+    );
+  }
+}
+
+class _ScreenBody extends StatelessWidget {
+  const _ScreenBody({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            'Netflix project!',
+            style: TextStyle(
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
             ),
-            ElevatedButton(
-              onPressed: () => context.go('/'),
-              child: const Text(
-                'Go the home of the website',
-                selectableText: false,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => context.go('/netflix_clone/options'),
-              child: const Text(
-                'Go the OPTIONS of the NETFLIX project',
-                selectableText: false,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
