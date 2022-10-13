@@ -2,10 +2,10 @@ import 'package:design_system/infra/responsive_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:router/router.dart';
 
-class CustomAppBar extends StatelessWidget {
+class NavMenu extends StatelessWidget {
   final double scrollOffset;
 
-  const CustomAppBar({
+  const NavMenu({
     super.key,
     this.scrollOffset = 0.0,
   });
@@ -23,6 +23,7 @@ class CustomAppBar extends StatelessWidget {
       child: SafeArea(
         child: GridItem(
           as: Row,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset("assets/images/50x50.jpg"),
             const SizedBox(width: 12),
@@ -30,9 +31,9 @@ class CustomAppBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
-                  AppBarButton(title: "TV Shows", href: "/netflix_clone"),
-                  AppBarButton(title: "Movies", href: "/netflix_clone"),
-                  AppBarButton(title: "My List", href: "/netflix_clone"),
+                  _AppBarButton(title: "TV Shows", href: "/"),
+                  _AppBarButton(title: "Movies", href: "/"),
+                  _AppBarButton(title: "My List", href: "/"),
                 ],
               ),
             )
@@ -43,12 +44,12 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-class AppBarButton extends StatelessWidget {
+class _AppBarButton extends StatelessWidget {
   final String href;
 
   final String title;
 
-  const AppBarButton({Key? key, required this.href, required this.title})
+  const _AppBarButton({Key? key, required this.href, required this.title})
       : super(key: key);
 
   @override

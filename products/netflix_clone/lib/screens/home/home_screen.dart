@@ -38,9 +38,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
+      // PreferredSize: It's a base for the size of the appbar
       appBar: PreferredSize(
         preferredSize: Size(context.responsive.screenWidth.value, 50),
-        child: CustomAppBar(
+        child: NavMenu(
           scrollOffset: _scrollOffset,
         ),
       ),
@@ -53,6 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
+          const SliverToBoxAdapter(
+            child: ContentHeader(),
+          ),
           SliverToBoxAdapter(
             child: Container(
               height: 1000,
