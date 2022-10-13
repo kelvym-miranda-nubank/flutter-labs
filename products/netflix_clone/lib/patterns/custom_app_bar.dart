@@ -1,3 +1,4 @@
+import 'package:design_system/infra/responsive_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:router/router.dart';
 
@@ -20,7 +21,8 @@ class CustomAppBar extends StatelessWidget {
         (scrollOffset / 350).clamp(0, 1).toDouble(),
       ),
       child: SafeArea(
-        child: Row(
+        child: GridItem(
+          as: Row,
           children: [
             Image.asset("assets/images/50x50.jpg"),
             const SizedBox(width: 12),
