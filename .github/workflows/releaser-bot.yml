@@ -1,18 +1,22 @@
-name: pull request comment
+name: PR comment
 on:
   issue_comment:                                     
     types: [created, edited, deleted]
 jobs:
-  job01:
-    if: contains(github.event.comment.html_url, '/pull/')    # check if the comments come from pull request, exclude those from issue.
+  comment_checker:
+    # if: contains(github.event.comment.html_url, '/pull/')    # check if the comments come from pull request, exclude those from issue.
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: say hello
-        if: contains(github.event.comment.body, '/support')   # check the comment if it contains the keywords
-        run: |
-          echo say hello
+        if: contains(github.event.comment.body, '!support')   # check the comment if it contains the keywords
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Hello world ! :wave:
       - name: test
-        if: contains(github.event.comment.body, '/test')  # check the comment if it contains the keywords
+        if: contains(github.event.comment.body, '!test')  # check the comment if it contains the keywords
         run: |
           echo test
 
