@@ -4,7 +4,7 @@ on:
     types: [created, edited, deleted]
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GH_TOKENS }}
+  GH_TOKEN: ${{ secrets.GH_TOKENS }}
 
 jobs:
   comment_checker:
@@ -15,22 +15,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: "[RUN SOMETHING]"
-        if: contains(github.event.comment.body, '!support')   # check the comment if it contains the keywords
+      - name: Setup Flutter
+        uses: devsoutinho/flutter-composite-action@v4.0.1
+      
+      - name: "[RELEASE-beta X.0.0]"
+        if: contains(github.event.comment.body, '!release-beta')   # check the comment if it contains the keywords
         run: |
-          echo "I can run anything!!!"
+          melos bootstrap
+          melos version --manual-version=armor:0.10.0-dev.1
+          cd ./scripts && node --experimental-fetch ./comment.js "Creating a beta release for you :D"
+          cd ../
           ls -la
-      - name: "[SUPPORT COMMENT]"
-        if: contains(github.event.comment.body, '!support')   # check the comment if it contains the keywords
-        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
-        with:
-          token: ${{ secrets.GH_TOKENS }}
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Esse comentário é uma resposta de suporte!
-
-      - name: test
-        if: contains(github.event.comment.body, '!test')  # check the comment if it contains the keywords
+          git status
+      - name: "[RELEASE-MAJOR X.0.0]"
+        if: contains(github.event.comment.body, '!release-major')   # check the comment if it contains the keywords
         run: |
-          echo test
+          melos bootstrap
+          echo "IMPLEMENT ME"
+          ls -la
+      - name: "[RELEASE-MINOR 0.X.0]"
+        if: contains(github.event.comment.body, '!release-minor')   # check the comment if it contains the keywords
+        run: |
+          melos bootstrap
+          echo "IMPLEMENT ME"
+          ls -la
+      - name: "[RELEASE-PATCH 0.0.X]"
+        if: contains(github.event.comment.body, '!release-patch')   # check the comment if it contains the keywords
+        run: |
+          melos bootstrap
+          echo "IMPLEMENT ME"
+          ls -la
 
