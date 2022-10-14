@@ -24,14 +24,8 @@ jobs:
           melos bootstrap
           git config --global user.email "13791385+omariosouto@users.noreply.github.com"
           git config --global user.name "CI Bot - DevSoutinho"
-          echo $(date +%s) > sample.txt
-          git add .
-          git commit -m "release-beta-commit"
-          melos version --manual-version=armor:0.10.0-dev.1
-          cd ./scripts && node --experimental-fetch ./comment.js "Creating a beta release for you :D"
-          cd ../
-          ls -la
-          git status
+          
+          melos version --prerelease --preid=beta
       - name: "[RELEASE-MAJOR X.0.0]"
         if: contains(github.event.comment.body, '!release-major')   # check the comment if it contains the keywords
         run: |
