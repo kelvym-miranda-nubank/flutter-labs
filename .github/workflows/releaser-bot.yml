@@ -22,9 +22,9 @@ jobs:
         if: contains(github.event.comment.body, '!release-beta')   # check the comment if it contains the keywords
         run: |
           melos bootstrap
-          git config --global user.email "13791385+omariosouto@users.noreply.github.com"
-          git config --global user.name "CI Bot - DevSoutinho"
-          
+          # git config --global user.email "13791385+omariosouto@users.noreply.github.com"
+          # git config --global user.name "CI Bot - DevSoutinho"
+          echo "${{github.event.label.name}}"
           melos version --prerelease --preid=beta
       - name: "[RELEASE-MAJOR X.0.0]"
         if: contains(github.event.comment.body, '!release-major')   # check the comment if it contains the keywords
