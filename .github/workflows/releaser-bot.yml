@@ -2,6 +2,11 @@ name: PR comment
 on:
   issue_comment:                                     
     types: [created, edited, deleted]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
+
 jobs:
   comment_checker:
     # if: contains(github.event.comment.html_url, '/pull/')    # check if the comments come from pull request, exclude those from issue.
@@ -15,6 +20,7 @@ jobs:
         with:
           message: |
             Hello world ! :wave:
+          pr_number: $GITHUB_PR_NUMBER # This will comment on pull request #123
       - name: test
         if: contains(github.event.comment.body, '!test')  # check the comment if it contains the keywords
         run: |
