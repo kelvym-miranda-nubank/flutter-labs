@@ -22,6 +22,11 @@ jobs:
         if: contains(github.event.comment.body, '!release-beta')   # check the comment if it contains the keywords
         run: |
           melos bootstrap
+          git config --global user.email "13791385+omariosouto@users.noreply.github.com"
+          git config --global user.name "CI Bot - DevSoutinho"
+          echo $(date +%s) > sample.txt
+          git add .
+          git commit -m "release-beta-commit"
           melos version --manual-version=armor:0.10.0-dev.1
           cd ./scripts && node --experimental-fetch ./comment.js "Creating a beta release for you :D"
           cd ../
