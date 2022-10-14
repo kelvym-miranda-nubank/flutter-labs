@@ -5,22 +5,25 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GITHUB_PR_NUMBER: ${{ github.event.pull_request.number }}
 
 jobs:
   comment_checker:
     # if: contains(github.event.comment.html_url, '/pull/')    # check if the comments come from pull request, exclude those from issue.
     runs-on: ubuntu-latest
+    permissions:
+        issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: say hello
         if: contains(github.event.comment.body, '!support')   # check the comment if it contains the keywords
-        uses: thollander/actions-comment-pull-request@v1
+        uses: peter-evans/create-or-update-comment@a35cf36e5301d70b76f316e867e7788a55a31dae
         with:
-          message: |
-            Hello world ! :wave:
-          pr_number: $GITHUB_PR_NUMBER # This will comment on pull request #123
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            This issue is available for anyone to work on. **Make sure to reference this issue in your pull request.** :sparkles: Thank you for your contribution! :sparkles:
+
+
       - name: test
         if: contains(github.event.comment.body, '!test')  # check the comment if it contains the keywords
         run: |
