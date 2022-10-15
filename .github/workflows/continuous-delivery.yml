@@ -37,5 +37,5 @@ jobs:
     - name: Build & Deploy
       run: |
         melos bootstrap
-        melos build_shell_webportal
-        melos deploy_web_prod
+        # melos build_shell_webportal
+        # melos deploy_web_prod
