@@ -27,7 +27,7 @@ jobs:
           echo "kkkkkkkkkkkkkk"
           echo "${{github.event.label.name}}"
           echo "kkkkkkkkkkkkkk"
-          melos version --prerelease --preid=beta
+          melos version --prerelease --preid=beta --since=main
       - name: "[RELEASE-MAJOR X.0.0]"
         if: contains(github.event.comment.body, '!release-major')   # check the comment if it contains the keywords
         run: |
