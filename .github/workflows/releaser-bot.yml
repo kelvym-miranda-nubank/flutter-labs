@@ -28,6 +28,19 @@ jobs:
           echo "${{github.event.label.name}}"
           echo "kkkkkkkkkkkkkk"
           melos version --prerelease --preid=beta --since=main
+      - name: Create comment
+        if: contains(github.event.comment.body, '!release-beta')
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: 1
+          body: |
+            This is a multi-line test comment
+            - With GitHub **Markdown** :sparkles:
+            - Created by [create-or-update-comment][1]
+
+            [1]: https://github.com/peter-evans/create-or-update-comment
+          reactions: '+1'
+
       - name: "[RELEASE-MAJOR X.0.0]"
         if: contains(github.event.comment.body, '!release-major')   # check the comment if it contains the keywords
         run: |
